@@ -1,0 +1,161 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}: {#2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape William Chen} \\ \vspace{2pt}
+    \textbf{Software Engineer $|$ Data Engineer} \\ \vspace{2pt}
+    \small 225-250-8793 $|$ \textbf{Newark, NJ} $|$ \href{mailto:wchen1396@gmail.com}{\underline{wchen1396@gmail.com}} $|$ 
+    \href{https://github.com/smallchungus/}{\underline{github.com/smallchungus}} \\
+    \vspace{1pt}
+    \small U.S. Citizen - No Visa Sponsorship Required $|$ Public Trust Suitability
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Arizona State University}{Tempe, AZ}
+      {Masters in Computer Science (MCS), GPA: 4.00}{January 2024 -- May 2025}
+    \resumeSubheading
+      {Rutgers University}{New Brunswick, NJ}
+      {Bachelor of Arts in Computer Science and Psychology, GPA: 3.44}{Graduated May 2022}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Viatrie}{McLean, VA}
+    {Data Engineer (Federal Contract)}{Apr 2024 -- Apr 2026}
+    \resumeItemListStart
+      \resumeItem{ETL Pipeline Development}{Designed and deployed \textbf{50+ end-to-end ETL pipelines} across \textbf{dev, test, and prod} using \textbf{Python} and \textbf{AWS Glue}, ingesting \textbf{CSV/Parquet} from \textbf{S3} into \textbf{Amazon Redshift}; owned \textbf{150+ pipelines} serving downstream \textbf{USDA} data consumers}
+      \resumeItem{Data Modeling \& Schema Management}{Managed \textbf{200+ tables} across \textbf{3 environments} in \textbf{Redshift}, reducing schema-related incidents through consistent naming conventions and version-controlled migrations}
+      \resumeItem{Data Quality \& Validation}{Built automated \textbf{data quality checks} flagging whitespace errors, type mismatches, and malformed records across \textbf{multiple cloud providers}, ensuring \textbf{USDA} reporting compliance}
+      \resumeItem{Pipeline Orchestration}{Reduced pipeline failures by orchestrating multi-step workflows with \textbf{AWS Lambda} and \textbf{Step Functions}, implementing scheduling, error handling, and retry logic}
+      \resumeItem{Monitoring \& Observability}{Implemented pipeline monitoring with \textbf{Datadog} across \textbf{150+ pipelines}, tracking health metrics, SLA adherence, and data volume anomalies}
+      \resumeItem{Analytics \& Reporting}{Enabled \textbf{USDA} analysts to self-serve insights by loading data into \textbf{Redshift}, powering \textbf{Tableau} dashboards tracking cloud spend and operational metrics}
+      \resumeItem{CI/CD \& Automation}{Maintained \textbf{GitHub Actions} CI/CD workflows with \textbf{YAML} configs for automated testing, linting, and deployment across all pipeline environments}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Rutgers Chlamydia Lab}{New Brunswick, NJ}
+    {Research Assistant}{August 2022 -- Present}
+    \resumeItemListStart
+      \resumeItem{Protein Data Analysis}{Improved unknown protein classification to \textbf{89\% accuracy} by analyzing \textbf{mass spectrometry} data with \textbf{Python} and \textbf{machine learning} libraries to identify patterns in bacterial samples}
+      \resumeItem{Database Reliability}{Ensured integrity of \textbf{50TB} protein research database by implementing automated weekly backups and validation checks catching corrupted uploads before impacting downstream analysis}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Isaac Lab (NVIDIA)}{Remote}
+    {Open Source Contributor}{January 2024 -- Present}
+    \resumeItemListStart
+      \resumeItem{Reinforcement Learning}{Contributed to \textbf{Isaac Lab}, NVIDIA's open-source \textbf{GPU-accelerated} framework for \textbf{reinforcement learning} and \textbf{imitation learning} across multiple robot embodiments}
+      \resumeItem{Simulation Environments}{Expanded training coverage by developing modular \textbf{Python}-based simulation environments for manipulator and \textbf{AMR} tasks using \textbf{PhysX}, improving \textbf{sim-to-real transfer} outcomes}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{Distributed Task Queue} $|$ \emph{Go, Redis, PostgreSQL, Docker, Kubernetes}}{}
+        \resumeItemListStart
+          \resumeItem{Job Processing System}{Built task queue using \textbf{Go} and \textbf{Redis} for job scheduling with delayed jobs, retries with exponential backoff, and \textbf{PostgreSQL}-backed status tracking with real-time metrics dashboard}
+          \resumeItem{Container Orchestration}{Deployed to \textbf{Kubernetes} with separate deployments for API server, worker pods, and databases, implementing horizontal pod autoscaling based on queue depth}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages \& Databases}{: Python, Go, SQL, JavaScript, PostgreSQL, Redis, Amazon Redshift} \\
+    \textbf{Cloud \& Tools}{: AWS (Glue, Lambda, Step Functions, S3, Redshift), Docker, Kubernetes, Datadog, Tableau, GitHub Actions}
+  }}
+\end{itemize}
+
+\end{document}
