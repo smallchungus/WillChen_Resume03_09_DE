@@ -85,7 +85,7 @@
 
 \begin{center}
     \textbf{\Huge \scshape William Chen} \\ \vspace{2pt}
-    \textbf{Software Engineer $|$ Data Engineer} \\ \vspace{2pt}
+    \textbf{Software Engineer $|$ Data Platform Engineer} \\ \vspace{2pt}
     \small 225-250-8793 $|$ \textbf{Newark, NJ} $|$ \href{mailto:wchen1396@gmail.com}{\underline{wchen1396@gmail.com}} $|$
     \href{https://github.com/smallchungus/}{\underline{github.com/smallchungus}} \\
     \vspace{1pt}
@@ -97,7 +97,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Georgia Institute of Technology}{Atlanta, GA}
-      {Master of Science in Analytics}{January 2026 -- Present}
+      {Master of Science in Analytics (Data Science)}{January 2026 -- Present}
     \resumeSubheading
       {Rutgers University}{New Brunswick, NJ}
       {Bachelor of Arts in Computer Science and Psychology, GPA: 3.44}{Graduated May 2021}
@@ -109,13 +109,13 @@
 
   \resumeSubheading
     {Viatrie}{Arlington, VA}
-    {Data Engineer (Federal Contract)}{Apr 2024 -- Mar 2026}
+    {Data Platform Engineer (Federal Contract)}{Apr 2024 -- Mar 2026}
     \resumeItemListStart
-      \resumeItem{Pipeline Platform}{Shipped \textbf{50+ end-to-end ETL pipelines} from \textbf{S3} to \textbf{Amazon Redshift} in \textbf{Python} and \textbf{AWS Glue} and took ownership of \textbf{150+ pipelines} serving \textbf{USDA} data consumers; reusable templates cut new feed onboarding time by \textbf{50\%}}
+      \resumeItem{Pipeline Platform}{Built the reusable pipeline platform for a \textbf{USDA} federal contract, shipping \textbf{50+ end-to-end ETL pipelines} from \textbf{S3} to \textbf{Amazon Redshift} in \textbf{Python} and \textbf{AWS Glue}; owned \textbf{150+ pipelines} across the team and cut new feed onboarding time by \textbf{50\%} through reusable templates other engineers built on top of}
       \resumeItem{Runtime Wins}{Killed recurring \textbf{Glue} job timeout failures by re-architecting multi-step workflows with \textbf{AWS Lambda} and \textbf{Step Functions}, partitioned loads, and tuned DPU allocation, cutting end-to-end pipeline runtime by \textbf{60\%}}
-      \resumeItem{Deploys That Don't Break}{Rebuilt the deploy path with \textbf{GitHub Actions} CI/CD, automated tests, linting, and multi-env promotion, taking deploys from \textbf{\textasciitilde1 hour} of manual work to \textbf{\textasciitilde10 minutes} and eliminating unplanned schema rollbacks across \textbf{200+ tables} in \textbf{3 environments}}
+      \resumeItem{Delivery Infrastructure}{Built the deployment system engineers used daily with \textbf{GitHub Actions} CI/CD, \textbf{Docker} container builds, and \textbf{Terraform}-managed AWS resources across \textbf{200+ tables} in \textbf{3 environments}, taking deploys from \textbf{\textasciitilde1 hour} of manual work to \textbf{\textasciitilde10 minutes} and eliminating unplanned schema rollbacks}
       \resumeItem{Catching Bad Data Early}{Wrote data quality checks into \textbf{AWS Glue} jobs that fail-fast on whitespace, type mismatches, and malformed records; automated schema drift detection caught \textbf{3 upstream schema changes} over \textbf{6 months} before any bad data reached \textbf{USDA} analyst dashboards}
-      \resumeItem{Observability}{Instrumented \textbf{150+ pipelines} in \textbf{Datadog} with SLA tracking, volume anomaly detection, and on-call alerting, giving the team one place to see what broke instead of grepping through Glue logs}
+      \resumeItem{Platform Observability}{Instrumented \textbf{150+ pipelines} in \textbf{Datadog} with SLA tracking, volume anomaly detection, and on-call alerting, giving the team a single pane of glass into pipeline health instead of grepping through Glue logs}
       \resumeItem{Unblocking Analysts}{Shipped self-serve \textbf{Tableau} dashboards and written runbooks serving \textbf{100+ users} at \textbf{USDA}, powering congressional reports and internal budget reviews, and saving the team \textbf{\textasciitilde2 hours/week} of ad-hoc report pulls}
     \resumeItemListEnd
 
@@ -154,7 +154,7 @@
   \small{\item{
     \textbf{Languages \& Databases}{: Python, Go, SQL, JavaScript, TypeScript, PostgreSQL, Redis, Amazon Redshift} \\
     \textbf{Cloud \& Infrastructure}{: AWS (Glue, Lambda, Step Functions, S3, Redshift), Docker, Kubernetes, GitHub Actions, Datadog, Bash} \\
-    \textbf{Tooling \& Practices}{: CI/CD pipelines, distributed systems, REST APIs, observability and alerting, AI-assisted development (Claude, GitHub Copilot), technical documentation}
+    \textbf{Data Platform \& Infrastructure}{: CI/CD pipelines, distributed systems, REST APIs, observability and alerting, pipeline orchestration, Terraform, Infrastructure as Code, AI-assisted development (Claude, GitHub Copilot), technical documentation}
   }}
 \end{itemize}
 
