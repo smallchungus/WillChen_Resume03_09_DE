@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -29,8 +29,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 \raggedbottom
@@ -86,21 +86,21 @@
 \begin{center}
     \textbf{\Huge \scshape William Chen} \\ \vspace{2pt}
     \textbf{Software Engineer $|$ Data Engineer} \\ \vspace{2pt}
-    \small 225-250-8793 $|$ \textbf{Newark, NJ} $|$ \href{mailto:wchen1396@gmail.com}{\underline{wchen1396@gmail.com}} $|$ 
+    \small 225-250-8793 $|$ \textbf{Newark, NJ} $|$ \href{mailto:wchen1396@gmail.com}{\underline{wchen1396@gmail.com}} $|$
     \href{https://github.com/smallchungus/}{\underline{github.com/smallchungus}} \\
     \vspace{1pt}
-    \small U.S. Citizen - No Visa Sponsorship Required $|$ Public Trust Suitability
+    \small \textbf{U.S. Citizen - No Visa Sponsorship Required} $|$ \textbf{Public Trust Suitability}
 \end{center}
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Arizona State University}{Tempe, AZ}
-      {Masters in Computer Science (MCS), GPA: 4.00}{January 2024 -- May 2025}
+      {Georgia Institute of Technology}{Atlanta, GA}
+      {Master of Science in Analytics}{January 2026 -- Present}
     \resumeSubheading
       {Rutgers University}{New Brunswick, NJ}
-      {Bachelor of Arts in Computer Science and Psychology, GPA: 3.44}{Graduated May 2022}
+      {Bachelor of Arts in Computer Science and Psychology, GPA: 3.44}{Graduated May 2021}
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
@@ -108,32 +108,30 @@
 \resumeSubHeadingListStart
 
   \resumeSubheading
-    {Viatrie}{McLean, VA}
-    {Data Engineer (Federal Contract)}{Apr 2024 -- Apr 2026}
+    {Viatrie}{Arlington, VA}
+    {Data Engineer (Federal Contract)}{Apr 2024 -- Mar 2026}
     \resumeItemListStart
-      \resumeItem{ETL Pipeline Development}{Designed and deployed \textbf{50+ end-to-end ETL pipelines} across \textbf{dev, test, and prod} using \textbf{Python} and \textbf{AWS Glue}, ingesting \textbf{CSV/Parquet} from \textbf{S3} into \textbf{Amazon Redshift}; owned \textbf{150+ pipelines} serving downstream \textbf{USDA} data consumers}
-      \resumeItem{Data Modeling \& Schema Management}{Managed \textbf{200+ tables} across \textbf{3 environments} in \textbf{Redshift}, reducing schema-related incidents through consistent naming conventions and version-controlled migrations}
-      \resumeItem{Data Quality \& Validation}{Built automated \textbf{data quality checks} flagging whitespace errors, type mismatches, and malformed records across \textbf{multiple cloud providers}, ensuring \textbf{USDA} reporting compliance}
-      \resumeItem{Pipeline Orchestration}{Reduced pipeline failures by orchestrating multi-step workflows with \textbf{AWS Lambda} and \textbf{Step Functions}, implementing scheduling, error handling, and retry logic}
-      \resumeItem{Monitoring \& Observability}{Implemented pipeline monitoring with \textbf{Datadog} across \textbf{150+ pipelines}, tracking health metrics, SLA adherence, and data volume anomalies}
-      \resumeItem{Analytics \& Reporting}{Enabled \textbf{USDA} analysts to self-serve insights by loading data into \textbf{Redshift}, powering \textbf{Tableau} dashboards tracking cloud spend and operational metrics}
-      \resumeItem{CI/CD \& Automation}{Maintained \textbf{GitHub Actions} CI/CD workflows with \textbf{YAML} configs for automated testing, linting, and deployment across all pipeline environments}
+      \resumeItem{Pipeline Platform}{Shipped \textbf{50+ end-to-end ETL pipelines} from \textbf{S3} to \textbf{Amazon Redshift} in \textbf{Python} and \textbf{AWS Glue} and took ownership of \textbf{150+ pipelines} serving \textbf{USDA} data consumers; reusable templates cut new feed onboarding time by \textbf{50\%}}
+      \resumeItem{Runtime Wins}{Killed recurring \textbf{Glue} job timeout failures by re-architecting multi-step workflows with \textbf{AWS Lambda} and \textbf{Step Functions}, partitioned loads, and tuned DPU allocation, cutting end-to-end pipeline runtime by \textbf{60\%}}
+      \resumeItem{Deploys That Don't Break}{Rebuilt the deploy path with \textbf{GitHub Actions} CI/CD, automated tests, linting, and multi-env promotion, taking deploys from \textbf{\textasciitilde1 hour} of manual work to \textbf{\textasciitilde10 minutes} and eliminating unplanned schema rollbacks across \textbf{200+ tables} in \textbf{3 environments}}
+      \resumeItem{Catching Bad Data Early}{Wrote data quality checks into \textbf{AWS Glue} jobs that fail-fast on whitespace, type mismatches, and malformed records; automated schema drift detection caught \textbf{3 upstream schema changes} over \textbf{6 months} before any bad data reached \textbf{USDA} analyst dashboards}
+      \resumeItem{Observability}{Instrumented \textbf{150+ pipelines} in \textbf{Datadog} with SLA tracking, volume anomaly detection, and on-call alerting, giving the team one place to see what broke instead of grepping through Glue logs}
+      \resumeItem{Unblocking Analysts}{Shipped self-serve \textbf{Tableau} dashboards and written runbooks serving \textbf{100+ users} at \textbf{USDA}, powering congressional reports and internal budget reviews, and saving the team \textbf{\textasciitilde2 hours/week} of ad-hoc report pulls}
     \resumeItemListEnd
 
   \resumeSubheading
     {Rutgers Chlamydia Lab}{New Brunswick, NJ}
-    {Research Assistant}{August 2022 -- Present}
+    {Research Software Engineer}{August 2022 -- Present}
     \resumeItemListStart
-      \resumeItem{Protein Data Analysis}{Improved unknown protein classification to \textbf{89\% accuracy} by analyzing \textbf{mass spectrometry} data with \textbf{Python} and \textbf{machine learning} libraries to identify patterns in bacterial samples}
-      \resumeItem{Database Reliability}{Ensured integrity of \textbf{50TB} protein research database by implementing automated weekly backups and validation checks catching corrupted uploads before impacting downstream analysis}
+      \resumeItem{Protein Data Analysis}{Lifted unknown protein classification accuracy from \textbf{\textasciitilde70\%} to \textbf{89\%} by training \textbf{scikit-learn} ensemble models on \textbf{mass spectrometry} data, serving \textbf{10-30 researchers, scientists, and doctors} across \textbf{10+ collaborating labs} in bacterial sample analysis}
+      \resumeItem{Automation \& Reliability}{Cut \textbf{2+ hours} of daily manual work by scripting instrument data processing in \textbf{Python}; kept the \textbf{5TB} research database intact with automated weekly backups and upload validation that catches corrupted writes before downstream analysis}
     \resumeItemListEnd
 
   \resumeSubheading
     {Isaac Lab (NVIDIA)}{Remote}
     {Open Source Contributor}{January 2024 -- Present}
     \resumeItemListStart
-      \resumeItem{Reinforcement Learning}{Contributed to \textbf{Isaac Lab}, NVIDIA's open-source \textbf{GPU-accelerated} framework for \textbf{reinforcement learning} and \textbf{imitation learning} across multiple robot embodiments}
-      \resumeItem{Simulation Environments}{Expanded training coverage by developing modular \textbf{Python}-based simulation environments for manipulator and \textbf{AMR} tasks using \textbf{PhysX}, improving \textbf{sim-to-real transfer} outcomes}
+      \resumeItem{Open Source Contribution}{Contribute to \textbf{Isaac Lab}, NVIDIA's open-source \textbf{GPU-accelerated} framework for \textbf{reinforcement learning} and \textbf{imitation learning} across multiple robot embodiments, building modular \textbf{Python} simulation environments for manipulator and \textbf{AMR} tasks in \textbf{PhysX}}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -142,10 +140,11 @@
 \section{Projects}
   \resumeSubHeadingListStart
     \resumeProjectHeading
-        {\textbf{Distributed Task Queue} $|$ \emph{Go, Redis, PostgreSQL, Docker, Kubernetes}}{}
+        {\textbf{Distributed Task Queue} $|$ \emph{Go, Redis, PostgreSQL, Docker, Kubernetes, GitHub Actions}}{}
         \resumeItemListStart
-          \resumeItem{Job Processing System}{Built task queue using \textbf{Go} and \textbf{Redis} for job scheduling with delayed jobs, retries with exponential backoff, and \textbf{PostgreSQL}-backed status tracking with real-time metrics dashboard}
-          \resumeItem{Container Orchestration}{Deployed to \textbf{Kubernetes} with separate deployments for API server, worker pods, and databases, implementing horizontal pod autoscaling based on queue depth}
+          \resumeItem{Job Engine}{Built a distributed task queue in \textbf{Go} using \textbf{Redis} lists with \textbf{BLPOP} for blocking dequeue, processing \textbf{5K jobs across 4 workers in \textasciitilde10 seconds}; wrote the worker and scheduler from scratch instead of pulling in \textbf{Celery} to learn the internals of Go concurrency and Redis}
+          \resumeItem{Failure Handling}{Handled worker crashes with a \textbf{5-second heartbeat} written to \textbf{Redis}; jobs from workers that go silent for \textbf{30 seconds} get requeued by a sweeper, giving at-least-once delivery without a separate broker, plus \textbf{PostgreSQL}-backed status history and exponential-backoff retries}
+          \resumeItem{Ship Path}{Containerized with \textbf{Docker} and deployed to \textbf{Kubernetes} with separate deployments for API, workers, and databases; horizontal pod autoscaling on queue depth and automated build/test/rollout through \textbf{GitHub Actions}}
         \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -153,8 +152,9 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-    \textbf{Languages \& Databases}{: Python, Go, SQL, JavaScript, PostgreSQL, Redis, Amazon Redshift} \\
-    \textbf{Cloud \& Tools}{: AWS (Glue, Lambda, Step Functions, S3, Redshift), Docker, Kubernetes, Datadog, Tableau, GitHub Actions}
+    \textbf{Languages \& Databases}{: Python, Go, SQL, JavaScript, TypeScript, PostgreSQL, Redis, Amazon Redshift} \\
+    \textbf{Cloud \& Infrastructure}{: AWS (Glue, Lambda, Step Functions, S3, Redshift), Docker, Kubernetes, GitHub Actions, Datadog, Bash} \\
+    \textbf{Tooling \& Practices}{: CI/CD pipelines, distributed systems, REST APIs, observability and alerting, AI-assisted development (Claude, GitHub Copilot), technical documentation}
   }}
 \end{itemize}
 
