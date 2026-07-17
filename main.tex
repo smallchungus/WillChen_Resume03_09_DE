@@ -1,12 +1,4 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,10pt]{article}
-
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -19,36 +11,29 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
-
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
 \addtolength{\topmargin}{-.7in}
 \addtolength{\textheight}{1.4in}
-
 \urlstyle{same}
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
 \pdfgentounicode=1
-
-\newcommand{\resumeItem}[2]{
+\newcommand{\resumeItem}[1]{
   \item\small{
-    \textbf{#1}: {#2 \vspace{-2pt}}
+    {#1 \vspace{-2pt}}
   }
 }
-
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -56,107 +41,65 @@
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \begin{document}
-
 \begin{center}
     \textbf{\Huge \scshape William Chen} \\ \vspace{2pt}
-    \textbf{Software Engineer $|$ Data Platform Engineer} \\ \vspace{2pt}
-    \small \textbf{Jersey City, NJ 07302} $|$ \href{mailto:wchen1396@gmail.com}{\underline{wchen1396@gmail.com}} $|$
-    \href{https://willchennn.com/}{\underline{willchennn.com}} $|$
-    \href{https://github.com/smallchungus/}{\underline{github.com/smallchungus}} \\
+    \textbf{Data Platform Engineer} \\ \vspace{2pt}
+    \small Jersey City, NJ 07302 $|$ \href{mailto:wchen1396@gmail.com}{\underline{wchen1396@gmail.com}} $|$ \href{https://willchennn.com}{\underline{willchennn.com}} $|$ \href{https://github.com/smallchungus/}{\underline{github.com/smallchungus}} \\
     \vspace{1pt}
-    \small \textbf{U.S. Citizen - No Visa Sponsorship Required} $|$ \textbf{Public Trust Suitability}
+    \small \textbf{U.S. Citizen - No Visa Sponsorship Required}
 \end{center}
-
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Georgia Institute of Technology}{Atlanta, GA}
-      {Master of Science in Analytics (Data Science), GPA: 4.00}{January 2026 -- Present}
+      {Master of Science in Analytics (Data Science), GPA: 4.00}{January 2026 -- May 2027}
     \resumeSubheading
       {Rutgers University}{New Brunswick, NJ}
-      {Bachelor of Arts in Computer Science and Psychology, GPA: 3.44}{Graduated May 2022}
+      {Bachelor of Arts in Computer Science and Psychology, GPA: 3.44}{May 2021}
   \resumeSubHeadingListEnd
-
 %-----------EXPERIENCE-----------
 \section{Experience}
 \resumeSubHeadingListStart
-
   \resumeSubheading
-    {Viatrie}{Arlington, VA}
-    {Data Platform Engineer (Federal Contract)}{Apr 2024 -- Mar 2026}
-    \resumeItemListStart
-      \resumeItem{Pipeline Platform}{Built the reusable pipeline platform for a \textbf{USDA} federal contract, shipping \textbf{50+ end-to-end ETL pipelines} from \textbf{S3} to \textbf{Amazon Redshift} in \textbf{Python} and \textbf{AWS Glue}; owned \textbf{150+ pipelines} across the team and cut new feed onboarding time by \textbf{50\%} through reusable templates other engineers built on top of}
-      \resumeItem{Runtime Wins}{Killed recurring \textbf{Glue} job timeout failures by re-architecting multi-step workflows with \textbf{AWS Lambda} and \textbf{Step Functions}, partitioned loads, and tuned DPU allocation, cutting end-to-end pipeline runtime by \textbf{60\%}}
-      \resumeItem{Delivery Infrastructure}{Built the deployment system engineers used daily with \textbf{GitHub Actions} CI/CD, \textbf{Docker} container builds, and \textbf{Terraform}-managed AWS resources across \textbf{200+ tables} in \textbf{3 environments}, taking deploys from \textbf{\textasciitilde1 hour} of manual work to \textbf{\textasciitilde10 minutes} and eliminating unplanned schema rollbacks}
-      \resumeItem{Catching Bad Data Early}{Wrote data quality checks into \textbf{AWS Glue} jobs that fail-fast on whitespace, type mismatches, and malformed records; automated schema drift detection caught \textbf{3 upstream schema changes} over \textbf{6 months} before any bad data reached \textbf{USDA} analyst dashboards}
-      \resumeItem{Platform Observability}{Instrumented \textbf{150+ pipelines} in \textbf{Datadog} with SLA tracking, volume anomaly detection, and on-call alerting, giving the team a single pane of glass into pipeline health instead of grepping through Glue logs}
-      \resumeItem{Unblocking Analysts}{Shipped self-serve \textbf{Tableau} dashboards and written runbooks serving \textbf{100+ users} at \textbf{USDA}, powering congressional reports and internal budget reviews, and saving the team \textbf{\textasciitilde2 hours/week} of ad-hoc report pulls}
-    \resumeItemListEnd
-
-  \resumeSubheading
-    {Rutgers Chlamydia Lab}{New Brunswick, NJ}
+    {Rutgers University}{New Brunswick, NJ}
     {Research Software Engineer}{August 2022 -- Present}
     \resumeItemListStart
-      \resumeItem{Protein Data Analysis}{Lifted unknown protein classification accuracy from \textbf{\textasciitilde70\%} to \textbf{89\%} by training \textbf{scikit-learn} ensemble models on \textbf{mass spectrometry} data, serving \textbf{10-30 researchers, scientists, and doctors} across \textbf{10+ collaborating labs} in bacterial sample analysis}
-      \resumeItem{Automation \& Reliability}{Cut \textbf{2+ hours} of daily manual work by scripting instrument data processing in \textbf{Python}; kept the \textbf{5TB} research database intact with automated weekly backups and upload validation that catches corrupted writes before downstream analysis}
+      \resumeItem{\textbf{EURI AI Assistant:} natural-language-to-SQL and \textbf{RAG} chatbot over \textbf{AWS Athena}, adopted by \textbf{20 teams} (\textbf{500-1,000} internal users), retrieving EiMP documentation across datasets with \textbf{1,000,000,000+} PII-bearing healthcare rows}
+      \resumeItem{\textbf{Production API:} \textbf{5 FastAPI} endpoints (health checks, SQL generation, cost estimation, reviewed execution, query statistics), deployed on \textbf{AWS ECS Fargate} behind an \textbf{ALB}}
+      \resumeItem{\textbf{Testing and Reliability:} \textbf{127 unit tests} + \textbf{84 nonproduction integration tests} (auth, validation, SQL injection, prompt injection, PII enforcement, cost estimation, Athena execution)}
+      \resumeItem{\textbf{Security Guardrails:} bearer-token auth, team-based \textbf{PII} tiers, \textbf{sqlglot} validation, read-only SQL enforcement, prompt sanitization, pre-execution cost checks}
+      \resumeItem{\textbf{EiMP Data Quality:} identity quality across \textbf{125+} source systems (SSN, DOB, names, phones, emails, MBI, MRN/OID, overmerge patterns) over \textbf{1,000,000,000+} rows}
+      \resumeItem{\textbf{Identity Linkage:} resolved EID and HealthSafe ID relationships for \textbf{23,000,000} ISEC member records via \textbf{S3} and \textbf{Athena} joins}
+      \resumeItem{\textbf{High-Volume Validation:} analyzed a \textbf{127,000,000}-record Death Master File feed, validating \textbf{\char`\~97,800,000} SSN-only and \textbf{2,600,000} SSN-and-DOB matches}
+      \resumeItem{\textbf{Distributed Identity Messaging:} contributed to SCEPTER and EiMP \textbf{Kafka} flows from \textbf{125+} source systems through compacted topics with \textbf{100+ partitions}}
     \resumeItemListEnd
-
   \resumeSubheading
-    {Isaac Lab (NVIDIA)}{Remote}
-    {Open Source Contributor}{January 2024 -- Present}
+    {Viatrie}{Arlington, VA}
+    {Data Platform Engineer (Federal Contract)}{April 2024 -- March 2026}
     \resumeItemListStart
-      \resumeItem{Open Source Contribution}{Contribute to \textbf{Isaac Lab}, NVIDIA's open-source \textbf{GPU-accelerated} framework for \textbf{reinforcement learning} and \textbf{imitation learning} across multiple robot embodiments, building modular \textbf{Python} simulation environments for manipulator and \textbf{AMR} tasks in \textbf{PhysX}}
+      \resumeItem{\textbf{Scaled USDA analytics to 5,000-10,000 users} by building \textbf{50+ Python} and \textbf{AWS Glue} ETL pipelines and operating \textbf{150+} production pipelines feeding finance, program, and executive dashboards}
+      \resumeItem{\textbf{Enabled congressional budget submissions and decisions involving \$100,000,000+} by delivering governed datasets to USDA billing, budget, finance, and program teams}
+      \resumeItem{\textbf{Improved visibility into \$1,000,000+ annual cloud spend} by powering dashboards that attributed usage, exposed cost drivers, and guided department-level budgeting}
+      \resumeItem{\textbf{Cut pipeline runtime 60\% and deployment time from 60 to 10 minutes} using \textbf{AWS Lambda}, \textbf{Step Functions}, partitioned \textbf{Glue} loads, \textbf{Terraform}, and \textbf{GitHub Actions}}
+      \resumeItem{\textbf{Reduced new-feed onboarding time 50\%} via reusable pipeline templates, validation patterns, and deployment standards across the \textbf{150+} pipeline platform}
+      \resumeItem{\textbf{Protected production dashboards} with schema-drift and record-level validation that caught \textbf{3} upstream changes in \textbf{6 months}}
+      \resumeItem{\textbf{Improved reliability across 150+ pipelines and 3 environments} with \textbf{Datadog} SLA monitoring, anomaly alerts, \textbf{IAM} controls, and on-call runbooks}
+      \resumeItem{\textbf{Enabled self-service operations for 100+ internal users} through audit-ready runbooks and platform documentation}
     \resumeItemListEnd
-
 \resumeSubHeadingListEnd
-
-%-----------PROJECTS-----------
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeProjectHeading
-        {\textbf{Distributed Task Queue} $|$ \emph{Go, Redis, PostgreSQL, Docker, Kubernetes, GitHub Actions}}{}
-        \resumeItemListStart
-          \resumeItem{Job Engine}{Built a distributed task queue in \textbf{Go} using \textbf{Redis} lists with \textbf{BLPOP} for blocking dequeue, processing \textbf{5K jobs across 4 workers in \textasciitilde10 seconds}; wrote the worker and scheduler from scratch instead of pulling in \textbf{Celery} to learn the internals of Go concurrency and Redis}
-          \resumeItem{Failure Handling}{Handled worker crashes with a \textbf{5-second heartbeat} written to \textbf{Redis}; jobs from workers that go silent for \textbf{30 seconds} get requeued by a sweeper, giving at-least-once delivery without a separate broker, plus \textbf{PostgreSQL}-backed status history and exponential-backoff retries}
-          \resumeItem{Ship Path}{Containerized with \textbf{Docker} and deployed to \textbf{Kubernetes} with separate deployments for API, workers, and databases; horizontal pod autoscaling on queue depth and automated build/test/rollout through \textbf{GitHub Actions}}
-        \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-  \small{\item{
-    \textbf{Languages \& Databases}{: Python, Go, SQL, JavaScript, TypeScript, PostgreSQL, Redis, Amazon Redshift} \\
-    \textbf{Cloud \& Infrastructure}{: AWS (Glue, Lambda, Step Functions, S3, Redshift), Docker, Kubernetes, GitHub Actions, Datadog, Bash} \\
-    \textbf{Data Platform \& Infrastructure}{: CI/CD pipelines, distributed systems, REST APIs, observability and alerting, pipeline orchestration, Terraform, Infrastructure as Code, AI-assisted development (Claude, GitHub Copilot), technical documentation}
-  }}
-\end{itemize}
-
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages \& Databases}{: Python, SQL, JavaScript, TypeScript, Redis, Amazon Redshift} \\
+     \textbf{Cloud \& Infrastructure}{: AWS Glue, Lambda, Step Functions, S3, Athena, ECS Fargate, IAM, Terraform, FastAPI, Kafka, GitHub Actions, Datadog}
+    }}
+ \end{itemize}
 \end{document}
